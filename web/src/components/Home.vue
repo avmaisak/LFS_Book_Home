@@ -19,7 +19,7 @@
         <div class="cl w-12 txt-c">
           <a :href="github" class=" clr-vf-pal-def-white m-r-1"><i class="mi-github txt-sz-1-3"></i></a>
           <a :href="vk" class="clr-pal-def-white m-r-1"><i class="mi-vk txt-sz-1-3"></i></a>
-          <a :href="vk" class="clr-pal-def-white ">Официальное зеркало LFS</a>
+          <a :href="mirror" class="clr-pal-def-white ">Официальное зеркало LFS</a>
         </div>
       </div>
     </article>
