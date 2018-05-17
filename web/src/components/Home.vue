@@ -8,7 +8,7 @@
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
 
-      <div class="rw m-b-3">
+      <div class="rw m-b-3" id="book-links">
           <div class="cl w-6 txt-c-xs txt-c-sm txt-r-lg txt-l-md">
             <a :href="systemv" class="btn clr-pal-def-white m-r-1 txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase">systemv</a>
           </div>
@@ -18,7 +18,7 @@
       </div>
 
       <div class="rw">
-        <div class="cl w-12 txt-c opacity-0-8">
+        <div class="cl w-12 txt-c opacity-0-8" id="footer">
           <a :href="github" class=" clr-vf-pal-def-white m-r-1"><i class="mi-github txt-sz-1-3"></i></a>
           <a :href="vk" class="clr-pal-def-white m-r-1"><i class="mi-vk txt-sz-1-3"></i></a>
           <a :href="`mailto:${mail}`" class="clr-pal-def-white m-r-2-lg m-r-2-md"><i class="mi-envelope-out txt-sz-1-7 txt-sz-1-4-smx txt-sz-1-4-sm"></i></a>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import ScrollReveal from 'scrollreveal'
 export default {
   name: 'Home',
   data () {
@@ -46,6 +47,13 @@ export default {
       systemd: '/systemd/LFS-SYSD-BOOK.html',
       mail: 'am@rus-bit.com'
     }
+  },
+  mounted: function () {
+    // JavaScript
+    const sr = ScrollReveal({ reset: true })
+    // Customizing a reveal set
+    sr.reveal('#footer a', { duration: 700 }, 250)
+    sr.reveal('#book-links a', { duration: 700 }, 250)
   }
 }
 </script>
