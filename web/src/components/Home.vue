@@ -42,7 +42,7 @@ export default {
       vk: 'https://vk.com/linuxfromscratch_ru',
       systemv: '/systemv/LFS-BOOK.html',
       systemd: '/systemd/LFS-BOOK.html',
-      mail: 'am@rus-bit.com',
+      mail: 'am@rus-bit.com'
     }
   }
 }
