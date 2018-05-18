@@ -8,6 +8,8 @@
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
 
+      <router-link to="/pages/prologue/welcome" class="m-r-1"><i class="mi-home"></i></router-link>
+
       <div class="rw m-b-3" id="book-links">
           <div class="cl w-6 txt-c-xs txt-c-sm txt-r-lg txt-l-md">
             <a :href="systemv" class="btn clr-pal-def-white m-r-1 txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase">systemv</a>
