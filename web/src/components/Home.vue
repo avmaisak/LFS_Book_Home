@@ -4,11 +4,11 @@
       <article class="cont">
       <h1  class="txt-sz-3 txt-sz-2-sm txt-sz-2-smx txt-c txt-uppercase txt-100">{{title}}</h1>
       <div class="txt-c p-t-2 p-b-3">
-        <img :alt="title" src="/static/logo.svg" width="180" height="180" class="animation-rubberBand" />
+        <img :alt="title" src="/static/i/logo.svg" width="180" height="180" class="animation-rubberBand" />
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
 
-      <router-link to="/pages/prologue/welcome" class="m-r-1"><i class="mi-home"></i></router-link>
+      <router-link to="/pages/prologue/audience" class="m-r-1"><i class="mi-home"></i></router-link>
 
       <div class="rw m-b-3" id="book-links">
           <div class="cl w-6 txt-c-xs txt-c-sm txt-r-lg txt-l-md">

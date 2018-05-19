@@ -1,0 +1,18 @@
+{
+  "Book": "Linux From Scratch",
+  "Version": "20180519",
+  "Author": "Gerard Beekmans",
+  "ManagingEditor": "Bruce Dubbs",
+  "LicenseBook": "Creative Commons License",
+  "LicenseSrc": "MIT License",
+  "Translators": [{
+    "Name" : "Антон Майсак",
+    "Status" : "Технический перевод",
+    "Email" : "am@linuxfromscratch.org.ru"
+  },{
+    "Name" : "Елена Шевцова",
+    "Status" : "Главный редактор, корректор",
+    "Email" : "helen@linuxfromscratch.org.ru"
+  }
+]
+}

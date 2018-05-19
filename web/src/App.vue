@@ -12,4 +12,5 @@ export default {
 </script>
 
 <style lang="scss" src="../../external/Matrioshka/src/scss/matrioshka.complete.scss"></style>
-<style lang="css" src="../../external/Matrioshka/dist/icons/css/matrioshkaIcons.min.css"></style>
+<style lang="css"  src="../../external/Matrioshka/dist/icons/css/matrioshkaIcons.min.css"></style>
+<style lang="scss"  src="../static/styles/scss/book.styles.scss"></style>

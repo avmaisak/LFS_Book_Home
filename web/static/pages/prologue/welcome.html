@@ -1,4 +1,12 @@
-<h2>Создатель: Gerard Beekmans</h2>
-<h2>Главный редактор: Bruce Dubbs</h2>
-<p>Авторские права &copy; 1999- {{currentYear}} Gerard Beekmans</p>
-<p>Эта книга лицензирована в соответствии с Creative Commons License.</p>
+
+<h2>Создатель: {{cfg.Author}}</h2>
+<h2>Главный редактор: {{cfg.ManagingEditor}}</h2>
+<h3 class="m-t-1">Перевод на русский язык:</h3>
+
+{{#each cfg.Translators}}
+  <p><strong>{{Name}}</strong> ({{Status}})</p>
+{{/each}}
+<br />
+<p>Авторские права &copy; 1999-{{currentYear}} <strong>{{cfg.Author}}</strong></p>
+<p>Эта книга лицензирована в соответствии с <strong>{{cfg.LicenseBook}}</strong>.</p>
+<p>Инструкции для компьютера могут быть извлечены из книги под лицензией <strong>{{cfg.LicenseSrc}}</strong>.</p>
