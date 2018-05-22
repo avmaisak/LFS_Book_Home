@@ -1,11 +1,13 @@
 <template>
-  <div class="cont-full clr-bg-indigo-600 h-100 p-t-4">
-    <nav class="clr-pal-def-white p-1 fix-t">
-      <div class="cont">
+  <div class="cont-full clr-bg-indigo-600 h-100 p-t-4 p-b-4">
+    <article class="cont clr-bg-pal-def-white p-t-2 p-l-3 p-r-3 p-b-4 txt-j">
+       <nav class="clr-grey-500 m-b-1">
         <router-link to="/"><i class="mi-home"></i></router-link>
-      </div>
-    </nav>
-    <article v-html="content" class="cont clr-bg-pal-def-white p-3 txt-j"></article>
+        <router-link to="/pages/prologue/foreword" class="m-r-1"><i class="mi-ios-arrow-round-back"></i></router-link>
+        <router-link to="/pages/shared/contents"><i class="mi-grid"></i></router-link>
+      </nav>
+      <section v-html="content"></section>
+    </article>
   </div>
 </template>
 
@@ -27,6 +29,9 @@ export default {
   name: 'Page',
   data: function () {
     return dataSource
+  },
+  beforeMount () {
+    console.log('before')
   },
   mounted () {
     this.initMoment(moment)

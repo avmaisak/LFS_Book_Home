@@ -8,14 +8,19 @@
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
 
-      <router-link to="/pages/prologue/audience" class="m-r-1"><i class="mi-home"></i></router-link>
+      <router-link to="/pages/prologue/foreword" class="m-r-1"><i class="mi-home"></i></router-link>
 
+      <div class="rw">
+        <div class="cl w-12 txt-c">
+          <h3 class="txt-bold txt-sz-1-1">Выберите редакцию</h3>
+        </div>
+      </div>
       <div class="rw m-b-3" id="book-links">
-          <div class="cl w-6 txt-c-xs txt-c-sm txt-r-lg txt-l-md">
-            <a :href="systemv" class="btn clr-pal-def-white m-r-1 txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase">systemv</a>
+          <div class="cl w-12-xs w-6-sm w-6-md w-6-lg txt-c ">
+            <a :href="systemv" class="btn clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemv</a>
           </div>
-          <div class="cl w-6 txt-c-xs txt-c-sm txt-l-lg txt-l-md">
-            <a :href="systemd" class="btn clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase">systemd</a>
+          <div class="cl w-12-xs w-6-sm w-6-md w-6-lg txt-c">
+            <a :href="systemd" class="btn clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemd</a>
           </div>
       </div>
 
