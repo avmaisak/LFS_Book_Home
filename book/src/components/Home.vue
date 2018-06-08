@@ -8,8 +8,6 @@
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
 
-      <router-link to="/pages/prologue/foreword" class="m-r-1"><i class="mi-home"></i></router-link>
-
       <div class="rw">
         <div class="cl w-12 txt-c">
           <h3 class="txt-bold txt-sz-1-1">Выберите редакцию</h3>
@@ -39,20 +37,21 @@
 
 <script>
 import ScrollReveal from 'scrollreveal'
+
 export default {
   name: 'Home',
   data () {
     return {
       title: 'Перевод книги Linux From Scratch',
       author: 'Gerard Beekmans',
-      description: 'Linux From Scratch - книга, которая обеспечит Вас знаниями и инструкциями, необходимыми для того, чтобы сконструировать свою собственную Linux систему. Это готовый шаблон, выполнив который, вы получите правильно работающую систему. К тому же, Вы свободны менять инструкции на Ваше усмотрение, что также является важной частью этого проекта. Вы всё контролируете - мы просто протягиваем Вам руку помощи, чтобы вы смогли начать собственное путешествие в мир Linux!',
+      description: 'Linux From Scratch - книга, которая обеспечит Вас знаниями и инструкциями, необходимыми для того, чтобы создать свою собственную Linux систему. Это готовый шаблон, выполнив который, вы получите правильно работающую систему. К тому же, Вы свободны менять инструкции на Ваше усмотрение, что также является важной частью этого проекта. Вы всё контролируете - мы просто протягиваем Вам руку помощи, чтобы вы смогли начать собственное путешествие в мир Linux!',
       status: 'Черновой технический перевод',
       github: 'https://github.com/avmaisak/LFS_Book',
       mirror: 'https://linuxfromscratch.org.ru/',
       vk: 'https://vk.com/linuxfromscratch_ru',
-      systemv: '/systemv/LFS-BOOK.html',
-      systemd: '/systemd/LFS-SYSD-BOOK.html',
-      mail: 'am@rus-bit.com'
+      systemv: '/systemv/index.html',
+      systemd: '/systemd/index.html',
+      mail: 'info@linuxfromscratch.org.ru'
     }
   },
   mounted: function () {
