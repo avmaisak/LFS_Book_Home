@@ -2,12 +2,11 @@
   <div>
     <main class="h-100 clr-bg-indigo-500 clr-pal-def-white p-t-5-lg p-t-5-md p-4-sm p-4-smx">
       <article class="cont">
-      <h1  class="txt-sz-3 txt-sz-2-sm txt-sz-2-smx txt-c txt-uppercase txt-100">{{title}}</h1>
-      <div class="txt-c p-t-2 p-b-3">
-        <img :alt="title" src="/static/i/logo.svg" width="180" height="180" class="animation-rubberBand" />
+      <h1  class="txt-sz-3 txt-sz-2-sm txt-sz-1-7-smx txt-c txt-uppercase txt-100">{{title}}</h1>
+      <div class="txt-c p-b-3">
+        <img id="logo" :alt="title" src="/static/i/logo.svg" width="120" height="120" class="animation-rubberBand" />
       </div>
       <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
-
       <div class="rw">
         <div class="cl w-12 txt-c">
           <h3 class="txt-bold txt-sz-1-1">Выберите редакцию</h3>
@@ -58,6 +57,7 @@ export default {
     // JavaScript
     const sr = ScrollReveal({ reset: true })
     // Customizing a reveal set
+    sr.reveal('#logo', { duration: 700 }, 250)
     sr.reveal('#footer a', { duration: 700 }, 250)
     sr.reveal('#book-links a', { duration: 700 }, 250)
   }
