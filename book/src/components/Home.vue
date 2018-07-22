@@ -1,28 +1,40 @@
 <template>
   <div>
-    <main class="h-100 clr-bg-indigo-500 clr-pal-def-white p-t-5-lg p-t-5-md p-4-sm p-4-smx">
+    <main class="h-100 clr-bg-indigo-500 clr-pal-def-white p-t-3-lg p-t-5-md p-4-sm p-4-smx">
       <article class="cont">
-      <h1  class="txt-sz-3 txt-sz-2-sm txt-sz-1-7-smx txt-c txt-uppercase txt-100">{{title}}</h1>
-      <div class="txt-c p-b-3">
+      <h1  class="txt-sz-3 txt-sz-2-sm txt-sz-1-6-smx txt-c txt-400">{{title}}</h1>
+      <div class="txt-c p-b-2">
         <img id="logo" :alt="title" src="/static/i/logo.svg" width="120" height="120" class="animation-rubberBand" />
       </div>
-      <p class="txt-j m-b-3 txt-sz-1-2">{{description}}</p>
+      <p class="txt-j m-b-2 txt-sz-1-1">{{description}}</p>
       <div class="rw">
         <div class="cl w-12 txt-c">
           <h3 class="txt-bold txt-sz-1-1">Выберите редакцию</h3>
         </div>
       </div>
-      <div class="rw m-b-3" id="book-links">
+      <div class="rw m-b-2" id="book-links">
           <div class="cl w-12-xs w-6-sm w-6-md w-6-lg txt-c ">
-            <a :href="systemv" class="btn clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemv</a>
+            <a :href="systemv" class="btn clr-bg-indigo-900 clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemv</a>
+            <small>
+              <span>Одна страница:</span>
+              <a :href="systemv_chuked_html">html</a>
+              &nbsp;
+              <a :href="systemv_chuked_txt">txt</a>
+            </small>
           </div>
           <div class="cl w-12-xs w-6-sm w-6-md w-6-lg txt-c">
-            <a :href="systemd" class="btn clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemd</a>
+            <a :href="systemd" class="btn clr-bg-indigo-800 clr-pal-def-white txt-sz-1-4 txt-sz-0-9-sm txt-sz-0-9-smx txt-uppercase d-block m-1">systemd</a>
+             <small>
+              <span>Одна страница:</span>
+              <a :href="systemd_chuked_html">html</a>
+              &nbsp;
+              <a :href="systemd_chuked_txt">txt</a>
+            </small>
           </div>
       </div>
 
       <div class="rw">
-        <div class="cl w-12 txt-c opacity-0-8" id="footer">
+        <div class="cl w-12 txt-c opacity-0-8 p-b-3" id="footer">
           <a :href="github" class=" clr-vf-pal-def-white m-r-1"><i class="mi-github txt-sz-1-3"></i></a>
           <a :href="vk" class="clr-pal-def-white m-r-1"><i class="mi-vk txt-sz-1-3"></i></a>
           <a :href="`mailto:${mail}`" class="clr-pal-def-white m-r-2-lg m-r-2-md"><i class="mi-envelope-out txt-sz-1-7 txt-sz-1-4-smx txt-sz-1-4-sm"></i></a>
@@ -49,6 +61,10 @@ export default {
       mirror: 'https://linuxfromscratch.org.ru/',
       vk: 'https://vk.com/linuxfromscratch_ru',
       systemv: '/systemv/index.html',
+      systemv_chuked_html: '/systemv-nc/LFS-BOOK.html',
+      systemv_chuked_txt: '/systemv-nc/systemv.txt',
+      systemd_chuked_html: '/systemd-nc/LFS-SYSD-BOOK.html',
+      systemd_chuked_txt: '/systemd-nc/systemd.txt',
       systemd: '/systemd/index.html',
       mail: 'info@linuxfromscratch.org.ru'
     }
