@@ -24,7 +24,14 @@ export class IndexComponent implements OnInit {
 	selectedRelease: IRelease;
 	selectedType: IType;
 
-	get systemvUrl(): String {
+	get prefix(): string {
+		if (this.selectedRelease.path !== '') {
+			return '/';
+		}
+		return '';
+	}
+
+	get systemvUrl(): string {
 		let resType = '';
 		switch (this.selectedType.name) {
 			case 'paged':  resType = '/systemv'; break;
@@ -32,7 +39,7 @@ export class IndexComponent implements OnInit {
 			case 'txt':  resType = '/systemv-nc/systemv.txt'; break;
 		}
 
-		return `${this.dataModel.basePath}/${this.selectedRelease.path}${resType}`.replace('//', '/');
+		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
 	}
 
 	get systemdUrl(): String {
@@ -43,9 +50,8 @@ export class IndexComponent implements OnInit {
 			case 'txt':  resType = '/systemd-nc/systemd.txt'; break;
 		}
 
-		return `${this.dataModel.basePath}/${this.selectedRelease.path}${resType}`.replace('//', '/');
+		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
 	}
-
 
 	constructor() { }
 
