@@ -1,0 +1,41 @@
+<!-- header -->
+<h1 class="text-center display-4 ">Перевод книги Linux From Scratch</h1>
+<!-- logo -->
+<img alt="Перевод книги Linux From Scratch" src="/assets/i/logo.svg" width="120" height="120" class="d-block mx-auto my-2" />
+<!-- content -->
+<p class="my-4 font-weight-normal">Linux From Scratch - книга, которая обеспечит Вас знаниями и инструкциями, необходимыми для того, чтобы создать свою собственную Linux систему. Это готовый шаблон, выполнив который, вы получите правильно работающую систему. К тому же, Вы свободны менять инструкции на Ваше усмотрение, что также является важной частью этого проекта. Вы всё контролируете - мы просто протягиваем Вам руку помощи, чтобы вы смогли начать собственное путешествие в мир Linux!</p>
+<!-- header -->
+<h3 class="text-center my-4">Выбор версии и редакции</h3>
+<div class="form-group p-0 m-0 w-25 mx-auto">
+	<div class="row">
+		<div class="col-6">
+			<select class="form-control" [(ngModel)]="selectedRelease">
+				<option class="MATERIAL_indigo_700-bg" *ngFor="let rel of dataModel.releases" [ngValue]="rel" [selected]="rel === selectedRelease ? 'selected': '' " >{{ rel.name }}</option>
+			</select>
+		</div>
+		<div class="col-6">
+			<select class="form-control" [(ngModel)]="selectedType">
+				<option class="MATERIAL_indigo_700-bg" *ngFor="let type of dataModel.types" [ngValue]="type" [selected]="type === selectedType ? 'selected': '' " >{{ type.name }}</option>
+			</select>
+		</div>
+	</div>
+	<div class="btn-group mx-auto text-center d-block mt-4" role="group" aria-label="Basic example">
+		<a [href]="systemvUrl" target="_blank" class="btn btn-outline-light btn-book-type" (click)="onSystemVClick();"><b>SystemV init</b></a>
+		<a [href]="systemdUrl" target="_blank" class="btn btn-outline-light btn-book-type" (click)="onSystemDClick();"><b>SystemD</b></a>
+	</div>
+
+</div>
+<!-- footer -->
+<footer class="text-center mt-5">
+	<a [href]="dataModel.mirror1" target="_blank">Зеркало 1</a>
+	<a [href]="dataModel.mirror2" target="_blank" class="ml-4">Зеркало 2</a>
+	<a [href]="dataModel.git" target="_blank" class="ml-4">
+		<i class="mi-github icon-footer"></i>
+	</a>
+	<a [href]="'mailto:' + dataModel.mail" target="_blank" class="ml-4">
+		<i class="mi-envelope-out icon-footer"></i>
+	</a>
+	<a [href]="dataModel.vk" target="_blank" class="ml-4">
+		<i class="mi-vk icon-footer"></i>
+	</a>
+</footer>
