@@ -43,7 +43,7 @@
 
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
-import 'core-js/es7/reflect';
+// import 'core-js/es7/reflect';
 
 
 /**
@@ -78,3 +78,13 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+// @ts-ignore
+// tslint:disable-next-line: only-arrow-functions
+window.__importDefault = function (mod) { return mod && mod.__esModule ? mod : { default: mod }; };
+
+if (!Element.prototype.matches) {
+	Element.prototype.matches = (Element as any).prototype.matchesSelector ||
+		Element.prototype.webkitMatchesSelector ||
+		(Element as any).prototype.mozMatchesSelector ||
+		(Element as any).prototype.msMatchesSelector;
+}

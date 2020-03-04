@@ -7,5 +7,9 @@
 		"types": ["node"],
 		"typeRoots": ["../node_modules/@types"]
 	},
+	"angularCompilerOptions": {
+		"disableTypeScriptVersionCheck": true,
+		"enableIvy": false
+	},
 	"exclude": ["test.ts", "**/*.spec.ts"]
 }
