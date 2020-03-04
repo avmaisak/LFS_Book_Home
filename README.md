@@ -1,6 +1,6 @@
 # Linux From Scratch (Russian Translation) home start web page
 
-See https://book.linuxfromscratch.org.ru/
+See https://book.linuxfromscratch.ru/
 
 [![Build status](https://ci.appveyor.com/api/projects/status/cdoxuvmvnmfd4dif?svg=true)](https://ci.appveyor.com/project/avmaisak/lfs-book-home)
 

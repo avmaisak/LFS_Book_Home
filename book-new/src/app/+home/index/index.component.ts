@@ -11,10 +11,9 @@ import { IType } from 'app/core/model/IType';
 export class IndexComponent implements OnInit {
 
 	public dataModel: any = {
-		basePath: 'https://book.linuxfromscratch.org.ru',
-		mail: 'info@linuxfromscratch.org.ru',
-		mirror1: 'https://linuxfromscratch.org.ru/',
-		mirror2: 'https://linuxfromscratch.ru/',
+		basePath: 'https://book.linuxfromscratch.ru',
+		mail: 'info@linuxfromscratch.ru',
+		mirror1: 'https://linuxfromscratch.ru/',
 		vk: 'https://vk.com/linuxfromscratch_ru',
 		git: 'https://github.com/avmaisak/LFS_Book',
 		releases: releases,
