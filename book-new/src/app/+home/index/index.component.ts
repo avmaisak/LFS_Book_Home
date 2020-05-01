@@ -10,7 +10,7 @@ import { IType } from 'app/core/model/IType';
 })
 export class IndexComponent implements OnInit {
 
-	public dataModel: any = {
+	dataModel: any = {
 		basePath: 'https://book.linuxfromscratch.ru',
 		mail: 'info@linuxfromscratch.ru',
 		mirror1: 'https://linuxfromscratch.ru/',
@@ -24,10 +24,9 @@ export class IndexComponent implements OnInit {
 	selectedType: IType;
 
 	get prefix(): string {
-		if (this.selectedRelease.path !== '') {
-			return '/';
-		}
-		return '';
+		let res = '';
+		this.selectedRelease.path !== '' ? res= '/'  : res = '';
+		return res;
 	}
 
 	get systemvUrl(): string {
@@ -58,7 +57,5 @@ export class IndexComponent implements OnInit {
 		this.selectedRelease = this.dataModel.releases[0];
 		this.selectedType = this.dataModel.types[0];
 	}
-
-
 
 }
