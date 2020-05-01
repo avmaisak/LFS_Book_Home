@@ -3,13 +3,14 @@
 	"compilerOptions": {
 		"outDir": "../out-tsc/app",
 		"baseUrl": "./",
-		"module": "es2015",
+		"module": "esnext",
 		"types": ["node"],
 		"typeRoots": ["../node_modules/@types"]
 	},
 	"angularCompilerOptions": {
-		"disableTypeScriptVersionCheck": true,
-		"enableIvy": false
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true,
+		"enableIvy": true
 	},
 	"exclude": ["test.ts", "**/*.spec.ts"]
 }
