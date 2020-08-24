@@ -6,18 +6,16 @@ import { IType } from 'app/core/model/IType';
 @Component({
 	selector: 'app-index',
 	templateUrl: './index.component.html',
-	styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
 
 	dataModel: any = {
 		basePath: 'https://book.linuxfromscratch.ru',
-		mail: 'info@linuxfromscratch.ru',
 		mirror1: 'https://linuxfromscratch.ru/',
-		vk: 'https://vk.com/linuxfromscratch_ru',
 		git: 'https://github.com/avmaisak/LFS_Book',
 		releases: releases,
 		types: types,
+		telegramm: 'https://t.me/LinuxFromScratch_RUS'
 	}
 
 	selectedRelease: IRelease;
@@ -35,6 +33,7 @@ export class IndexComponent implements OnInit {
 			case 'paged':  resType = '/systemv'; break;
 			case 'chunked-html':  resType = '/systemv-nc/LFS-BOOK.html'; break;
 			case 'txt':  resType = '/systemv-nc/systemv.txt'; break;
+			case 'pdf':  resType = '/systemv-nc/systemv.pdf'; break;
 		}
 
 		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
@@ -46,12 +45,11 @@ export class IndexComponent implements OnInit {
 			case 'paged':  resType = '/systemd'; break;
 			case 'chunked-html':  resType = '/systemd-nc/LFS-SYSD-BOOK.html'; break;
 			case 'txt':  resType = '/systemd-nc/systemd.txt'; break;
+			case 'pdf':  resType = '/systemv-nc/systemd.pdf'; break;
 		}
 
 		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
 	}
-
-	constructor() { }
 
 	ngOnInit() {
 		this.selectedRelease = this.dataModel.releases[0];

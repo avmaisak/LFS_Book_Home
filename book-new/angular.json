@@ -46,10 +46,7 @@
 							"src/assets"
 						],
 						"styles": [
-							"./node_modules/matrioshka.icons/dist/css/matrioshka-icons.min.css",
-							"./node_modules/matrioshka.colors/dist/css/min/material.css",
-							"./node_modules/bootstrap/scss/bootstrap.scss",
-							"src/assets/styles/styles.scss"
+							"./node_modules/bootstrap/scss/bootstrap.scss"
 						],
 						"scripts": []
 					},
