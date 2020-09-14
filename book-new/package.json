@@ -7,7 +7,7 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve --open --watch --port=3333",
-		"build": "ng build --aot=true --buildOptimizer=true --crossOrigin=anonymous --extractCss=true --extractLicenses=true --forkTypeChecker=true --optimization=true --outputHashing=none --prod=true --progress=true --showCircularDependencies=true --statsJson=true",
+		"build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --aot=true --buildOptimizer=true --crossOrigin=anonymous --extractCss=true --extractLicenses=true --forkTypeChecker=true --optimization=true --outputHashing=none --prod=true --progress=true --showCircularDependencies=true --statsJson=true",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
