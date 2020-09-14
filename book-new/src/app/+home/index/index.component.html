@@ -1,39 +1,62 @@
 <!-- header -->
-<h1 class="text-center">Перевод книги Linux From Scratch</h1>
+<h1 class="text-center mt-5">Перевод книги Linux From Scratch</h1>
 <!-- logo -->
-<img alt="Перевод книги Linux From Scratch" src="/assets/i/logo.svg" width="120" height="120" class="d-block mx-auto my-5" />
+<img alt="Перевод книги Linux From Scratch"
+	 src="/assets/i/logo.svg"
+	 width="120"
+	 height="120"
+	 class="d-block mx-auto my-5" />
 <!-- content -->
-<p class="pb-4 w-75 mx-auto">Linux From Scratch - книга, которая обеспечит Вас знаниями и инструкциями, необходимыми для того, чтобы создать свою собственную Linux систему. Это готовый шаблон, выполнив который, вы получите правильно работающую систему. К тому же, Вы свободны менять инструкции на Ваше усмотрение, что также является важной частью этого проекта. Вы всё контролируете - мы просто протягиваем Вам руку помощи, чтобы вы смогли начать собственное путешествие в мир Linux!</p>
+<p class="pb-4 w-75 mx-auto px-5 mx-5">Linux From Scratch - книга, которая обеспечит Вас знаниями и инструкциями, необходимыми для того, чтобы создать свою собственную Linux систему. Это готовый шаблон, выполнив который, вы получите правильно работающую систему. К тому же, Вы свободны менять инструкции на Ваше усмотрение, что также является важной частью этого проекта. Вы всё контролируете - мы просто протягиваем Вам руку помощи, чтобы вы смогли начать собственное путешествие в мир Linux!</p>
 <!-- header -->
 <h3 class="text-center my-4">Выбор версии и редакции</h3>
 <div class="form-group p-0 m-0 w-25 mx-auto">
 	<div class="row">
 		<div class="col-6">
-			<select class="form-control" [(ngModel)]="selectedRelease">
-				<option class="MATERIAL_indigo_700-bg" *ngFor="let rel of dataModel.releases" [ngValue]="rel" [selected]="rel === selectedRelease ? 'selected': '' " >{{ rel.name }}</option>
+			<select class="form-control"
+					[(ngModel)]="selectedRelease">
+				<option class="MATERIAL_indigo_700-bg"
+						*ngFor="let rel of dataModel.releases"
+						[ngValue]="rel"
+						[selected]="rel === selectedRelease ? 'selected': '' ">{{ rel.name }}</option>
 			</select>
 		</div>
 		<div class="col-6">
-			<select class="form-control" [(ngModel)]="selectedType">
-				<option class="MATERIAL_indigo_700-bg" *ngFor="let type of dataModel.types" [ngValue]="type" [selected]="type === selectedType ? 'selected': '' " >{{ type.name }}</option>
+			<select class="form-control"
+					[(ngModel)]="selectedType">
+				<option class="MATERIAL_indigo_700-bg"
+						*ngFor="let type of dataModel.types"
+						[ngValue]="type"
+						[selected]="type === selectedType ? 'selected': '' ">{{ type.name }}</option>
 			</select>
 		</div>
 	</div>
-	<div class="btn-group mx-auto text-center d-block mt-4" role="group" aria-label="Basic example">
-		<a [href]="systemvUrl" target="_blank" class="btn btn-outline-secondary ">SystemV init</a>
-		<a [href]="systemdUrl" target="_blank" class="btn btn-outline-secondary ">SystemD</a>
+	<div class="btn-group mx-auto text-center d-block mt-4"
+		 role="group"
+		 aria-label="Basic example">
+		<a [href]="systemvUrl"
+		   target="_blank"
+		   class="btn btn-outline-secondary ">SystemV init</a>
+		<a [href]="systemdUrl"
+		   target="_blank"
+		   class="btn btn-outline-secondary ">SystemD</a>
 	</div>
 
 </div>
 <!-- footer -->
 <footer class="text-center mt-5">
-	<a [href]="dataModel.mirror1" target="_blank">Зеркало</a>
+	<a [href]="dataModel.mirror1"
+	   target="_blank">Зеркало</a>
 
-	<a [href]="dataModel.git" target="_blank" class="ml-4">
+	<a [href]="dataModel.git"
+	   target="_blank"
+	   class="ml-4">
 		GitHub
 	</a>
 
-	<a [href]="dataModel.telegramm" target="_blank" class="ml-4">
+	<a [href]="dataModel.telegramm"
+	   target="_blank"
+	   class="ml-4">
 		Telegram
 	</a>
 </footer>

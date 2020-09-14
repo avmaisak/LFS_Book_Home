@@ -18,13 +18,7 @@ export const releases: IRelease[] = [
 
 export const types: IType[] = [
 	{
-		name: 'paged'
-	},
-	{
-		name: 'chunked-html'
-	},
-	{
-		name: 'txt'
+		name: 'html',
 	},
 	{
 		name: 'pdf'

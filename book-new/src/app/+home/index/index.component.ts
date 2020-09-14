@@ -15,7 +15,9 @@ export class IndexComponent implements OnInit {
 		git: 'https://github.com/avmaisak/LFS_Book',
 		releases: releases,
 		types: types,
-		telegramm: 'https://t.me/LinuxFromScratch_RUS'
+		telegramm: 'https://t.me/LinuxFromScratch_RUS',
+		pdfName: 'LFS-BOOK.pdf',
+		pdfSystemDName: 'LFS-SYSD-BOOK.pdf',
 	}
 
 	selectedRelease: IRelease;
@@ -23,17 +25,15 @@ export class IndexComponent implements OnInit {
 
 	get prefix(): string {
 		let res = '';
-		this.selectedRelease.path !== '' ? res= '/'  : res = '';
+		this.selectedRelease.path !== '' ? res = '/' : res = '';
 		return res;
 	}
 
 	get systemvUrl(): string {
 		let resType = '';
 		switch (this.selectedType.name) {
-			case 'paged':  resType = '/systemv'; break;
-			case 'chunked-html':  resType = '/systemv-nc/LFS-BOOK.html'; break;
-			case 'txt':  resType = '/systemv-nc/systemv.txt'; break;
-			case 'pdf':  resType = '/systemv-nc/systemv.pdf'; break;
+			case 'html': resType = '/systemv'; break;
+			case 'pdf': resType = `/systemv/${this.dataModel.pdfName}`; break;
 		}
 
 		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
@@ -42,10 +42,8 @@ export class IndexComponent implements OnInit {
 	get systemdUrl(): String {
 		let resType = '';
 		switch (this.selectedType.name) {
-			case 'paged':  resType = '/systemd'; break;
-			case 'chunked-html':  resType = '/systemd-nc/LFS-SYSD-BOOK.html'; break;
-			case 'txt':  resType = '/systemd-nc/systemd.txt'; break;
-			case 'pdf':  resType = '/systemv-nc/systemd.pdf'; break;
+			case 'html': resType = '/systemd'; break;
+			case 'pdf': resType = `/systemd/${this.dataModel.pdfSystemDName}`; break;
 		}
 
 		return `${this.dataModel.basePath}${this.prefix}${this.selectedRelease.path}${resType}`;
